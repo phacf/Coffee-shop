@@ -14,13 +14,13 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  div, aside {
+  div, aside, section {
     @apply text-base-text text-text-m font-roboto
   }
 
 
   h1{
-    @apply text-base-title font-black font-baloo text-title-xl
+    @apply text-base-title font-extrabold font-baloo text-title-xl
   }
   h2 ,h3, h4, h5, h6{
     @apply text-base-subtitle text-text-l font-baloo
