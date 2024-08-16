@@ -2,7 +2,7 @@ import { ShoppingCartSimple, Timer, Package, Coffee } from '@phosphor-icons/reac
 
 export function Brand() {
   return (
-    <section className="bg-[url('/public/images/hero-bg.svg')] bg-cover grid grid-cols-2 gap-14 px-40 py-20">
+    <section className="bg-[url('/public/images/hero-bg.svg')] bg-cover flex justify-center gap-14 px-40 py-20">
       <div className="w-[36.75rem] ">
         <h1>Encontre o café perfeito para qualquer hora do dia</h1>
         <h3 className=" mt-4 mb-16">Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</h3>
