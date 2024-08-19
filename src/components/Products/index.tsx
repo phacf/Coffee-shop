@@ -1,4 +1,5 @@
 import { ProductCard } from '@components/ProductCard'
+
 import data from '../../../data.json'
 export function Products() {
   return (

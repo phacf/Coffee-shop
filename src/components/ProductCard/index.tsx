@@ -1,3 +1,6 @@
+import { Button } from '@components/Button'
+import { MoneyAmound } from '@components/MoneyAmound'
+import { getCurrency } from '@helpers/money'
 import { ComponentProps } from 'react'
 
 interface ProductCardProps extends ComponentProps<'div'> {
@@ -22,9 +25,13 @@ export function ProductCard({ product }: ProductCardProps) {
           </div>
         ))}
       </div>
-      <h3 className='text-title-s font-bold'>{product.title}</h3>
-      <div className='text-text-s text-base-label text-center m-2 mb-8'>{product.description}</div>
-      
+      <h3 className="text-title-s font-bold">{product.title}</h3>
+      <div className="text-text-s text-base-label text-center m-2 mb-8">{product.description}</div>
+      <MoneyAmound price={product.price}/>
+
+      <div className='flex gap-1 items-center'>
+        <aside className='text-text-m'>1</aside>
+      </div>
     </div>
   )
 }
