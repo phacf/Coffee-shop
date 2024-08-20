@@ -34,11 +34,12 @@ const icons = {
 
 type ButtonProps = ComponentProps<'button'> & {
   icon?: keyof typeof icons
-  appearence?: 'primary' | 'secondary' | 'purple' | 'cart'
+  appearence?: 'primary' | 'secondary' | 'purple' | 'cart' | 'darkPurple'
+  selected?: boolean
 }
 
 export function Button(props: ButtonProps) {
-  const { children, icon, appearence = 'primary', ...rest } = props
+  const { children, icon, appearence = 'primary', selected, ...rest } = props
 
   const IconComponent = icon ? icons[icon] : null
 
@@ -49,6 +50,7 @@ export function Button(props: ButtonProps) {
         primary: 'bg-yellow hover:bg-yellow-dark',
         secondary: 'bg-base-button hover:bg-base-hover active:bg-purple-light active:ring-1 active:ring-purple',
         purple: 'bg-purple-light text-purple',
+        darkPurple: `bg-purple-dark text-base-card ${selected && 'bg-purple'}`,
         cart: 'bg-yellow-light text-yellow-dark',
       },
       size: {

@@ -14,9 +14,9 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "paths": {
-      "@components/*": ["./src/components/*"],
-      "@helpers/*": ["./src/helpers/*"],
-      "@assets/*": ["./public/*"],
+      "@components": ["./src/components"],
+      "@helpers": ["./src/helpers"],
+      "@assets": ["./public"]
     },
 
     /* Linting */

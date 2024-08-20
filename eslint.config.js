@@ -41,6 +41,7 @@ export default tseslint.config({
           'type', // Importações de tipos (útil em TypeScript)
         ],
         'newlines-between': 'always', // Adiciona linha em branco entre grupos
+
         alphabetize: { order: 'asc', caseInsensitive: true }, // Ordena em ordem alfabética
       },
     ],

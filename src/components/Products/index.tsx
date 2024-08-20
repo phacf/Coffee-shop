@@ -1,4 +1,4 @@
-import { ProductCard } from '@components/ProductCard'
+import { ProductCard } from '@components'
 
 import data from '../../../data.json'
 export function Products() {

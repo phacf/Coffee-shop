@@ -5,7 +5,6 @@ interface MoneyAmoundProps {
 }
 
 export function MoneyAmound({ price }: MoneyAmoundProps) {
-
   return (
     <div className="flex items-baseline gap-1">
       <aside className="text-text-s font-roboto">R$</aside>
@@ -13,4 +12,3 @@ export function MoneyAmound({ price }: MoneyAmoundProps) {
     </div>
   )
 }
-

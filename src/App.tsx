@@ -1,6 +1,4 @@
-import { Brand } from '@components/Brand'
-import { Header } from '@components/Header'
-import { Products } from '@components/Products'
+import { Brand, Header, Products } from '@components'
 
 export function App() {
   return (
