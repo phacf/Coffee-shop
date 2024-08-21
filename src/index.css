@@ -34,4 +34,20 @@
   button {
     @apply border-none cursor-pointer;
   }
+
+  @keyframes colorCycle {
+    0% {
+      @apply text-purple;
+    }
+    50% {
+      @apply text-purple-light;
+    }
+    100% {
+      @apply text-purple-dark;
+    }
+  }
+
+  .animate-color-cycle {
+    animation: colorCycle 2s linear infinite;
+  }
 }
