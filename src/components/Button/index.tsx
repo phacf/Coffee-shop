@@ -27,19 +27,20 @@ const icons = {
   Coffee: <Coffee size={26} weight="fill" />,
   Plus: <Plus size={26} />,
   Minus: <Minus size={26} />,
-  CreditCard: <CreditCard size={26} />,
-  Money: <Money size={26} />,
-  Bank: <Bank size={26} />,
+  CreditCard: <CreditCard size={26} className="text-purple" />,
+  Money: <Money size={26} className="text-purple" />,
+  Bank: <Bank size={26} className="text-purple" />,
 }
 
 type ButtonProps = ComponentProps<'button'> & {
   icon?: keyof typeof icons
   appearence?: 'primary' | 'secondary' | 'purple' | 'cart' | 'darkPurple'
   selected?: boolean
+  size?: 'withIcon' | 'default' | 'payment'
 }
 
 export function Button(props: ButtonProps) {
-  const { children, icon, appearence = 'primary', selected, ...rest } = props
+  const { children, icon, appearence = 'primary', selected, size, ...rest } = props
 
   const IconComponent = icon ? icons[icon] : null
 
@@ -56,6 +57,7 @@ export function Button(props: ButtonProps) {
       size: {
         default: 'py-3 px-11 ',
         withIcon: 'gap-3 p-2',
+        payment: 'px-4 py-5 flex gap-3 justify-start items-center',
       },
     },
   })
@@ -64,7 +66,7 @@ export function Button(props: ButtonProps) {
     <button
       {...rest}
       className={buttonClass({
-        size: icon ? 'withIcon' : 'default',
+        size: size ? size : icon ? 'withIcon' : 'default',
         color: appearence,
       })}
     >
